@@ -1,0 +1,138 @@
+ @import "./reset.css";
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+/* *{
+    border: 1px solid red;
+} */
+
+html{
+    font-size: 1.66vw; /*21,331px*/
+    font-family: 'Rubik';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.5rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(../img/background_header.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1.7rem;
+    padding:1.5rem 0;
+    font-family: "Unbounded";
+    color: white;
+}
+
+.form {
+    padding-bottom:2rem ;
+    font-size: 0.8rem;
+}
+
+.input {
+    background-color: white;
+    border-radius: 3px;
+    padding: 0.4rem 0.6rem;
+    width: 20rem;
+    margin-right: 0.5rem ;
+}
+
+.btn {
+    color: white;
+    background: linear-gradient(to right, #145751, #117b4d); 
+    padding: 0.4rem 0.6rem;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover{
+    background: linear-gradient(to right, #0d1533, #044a2c);  ;
+    transform: scale(1.05);
+}
+
+
+ 
+/*card */
+
+.card {
+    position: relative;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: 0px 5px 20px rgb(27,108,114,0.25);
+    width: 17rem;
+    border-radius: 6px;
+    font-family: 'Rubik';
+}
+
+.card::before {
+    position: absolute;
+    left:2%;
+    top:4%;
+    width: 96%;
+    height: 100%;
+    background-color: white;
+    content: "";
+    display: block;
+    z-index: -1;  
+    box-shadow: 0px 5px 20px rgb(27,108,114,0.25);
+    border-radius: 6px; 
+}
+
+.card-city {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.card-city span{
+    font-size: 0.8rem;
+    background-color: #0db56c;
+    color:white;
+    padding: 2px 4px;
+    border-radius: 8px;
+    position: absolute;
+    left: 45%;
+    top:20%
+}
+
+.card-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.card-weather:nth-child(2){
+    text-align: center;
+}
+
+.weather-value {
+    font-size: 2rem;
+    font-family: 'Rubik';
+    text-align: left; 
+}
+
+.weather-value span{
+    font-size: 5rem;
+}
+
+.weather-img {
+    justify-self: center;
+    width: 80%;
+}
+.weather-desc {
+    font-size: 1rem;
+}

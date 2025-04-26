@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="./css/main.css" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>как дела</p>
+    <header class="header">
+        <h1 class="title"> Прогноз погоды</h1>
+        <form class="form">
+             <input class="input" type="text" placeholder="Введите название города ">
+             <button class="btn">Показать</button>
+        </form>
+    </header>
+    <main>
+        <div class="card">
+            <h2 class="card-city">Лондон <span>GB</span></h2>
+            <div class="card-weather">
+                <div class="weather-value"><span>11</span>°с</div>
+                <img class="weather-img" src="./img/image.png" >
+            </div>            
+            <div class="weather-desc">Облачно</div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
 </body>
 </html>

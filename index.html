@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Прогноз погоды</title>
     <link rel="stylesheet" href="./css/main.css" media="all">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1 class="title"> Прогноз погоды</h1>
+        <h1 class="title">Прогноз погоды</h1>
         <form class="form" id="form">
-             <input id="input" class="input" type="text" placeholder="Введите название города ">
-             <button class="btn">Показать</button>
+            <div>
+                <input id="input" class="input" type="text" placeholder="Введите название города">
+                <input id="countryInput" class="input" type="text" placeholder="Введите название страны">
+            </div>
+            <div>
+                <button type="button" class="btn" id="toggleCountryInput">▼</button>
+                <button class="btn" type="submit">Показать</button>
+            </div>
         </form>
     </header>
     <main>
@@ -25,6 +32,8 @@
             <div class="weather-desc">Облачно</div>
         </div> -->
     </main>
-    <script src="./main.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/country_button.js"></script>
 </body>
 </html>

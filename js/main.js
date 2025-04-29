@@ -12,7 +12,7 @@ input_country.addEventListener('input', function(e) {
     validateInput(input_country); 
 });
 
-fetch('txt/countries.json')
+fetch('json/countries.json')
     .then(response => response.json())
     .then(data => {
         countryCodes = data;
@@ -49,8 +49,6 @@ form.onsubmit = function (e) {
             }
 
             for (const key in data) {
-                console.log(data[key].lat);
-                console.log(data[key].name);
                 const lat = data[key].lat;
                 const lon = data[key].lon;
                 const apiurl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apikey}&lang=ru&units=metric&mode=xml`;

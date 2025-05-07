@@ -31,9 +31,9 @@ form.onsubmit = function (e) {
     if (isCountryVisible) {
         let countryName = input_country.value.trim();
         let countryCode = countryCodes[countryName];
-        apiurl1 = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${countryCode}&limit=1&appid=${apikey}`;
+        apiurl1 = `http://api.openweathermap.org/geo/1.0/direct?q=${city},${countryCode}&limit=6&appid=${apikey}`;
     } else {
-        apiurl1 = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=4&appid=${apikey}`;
+        apiurl1 = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=6&appid=${apikey}`;
     }
 
     fetch(apiurl1)
@@ -47,7 +47,7 @@ form.onsubmit = function (e) {
             if (data.length === 0) {
                 alert('Город не найден. Пожалуйста, проверьте правильность ввода.');    
             }
-
+            console.log(data);
             for (const key in data) {
                 const lat = data[key].lat;
                 const lon = data[key].lon;
@@ -67,6 +67,7 @@ form.onsubmit = function (e) {
                         const weatherDesc = xmlDoc.querySelector("weather").getAttribute("value");
                         const weatherIcon = xmlDoc.querySelector("weather").getAttribute("icon");
                         const tempValue = xmlDoc.querySelector("temperature").getAttribute("value");
+                        console.log(xmlDoc);
                         const htmlCard = `
                             <div class="card">
                                 <h2 class="card-city">${cityName} <span>${countryValue}</span></h2>
